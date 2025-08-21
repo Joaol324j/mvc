@@ -30,4 +30,8 @@
         width: 100%;
         overflow-y: hidden;
     }
+
+    .gallery-item img {
+        height: 200px;
+    }
 }
