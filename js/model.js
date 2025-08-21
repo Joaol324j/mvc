@@ -16,7 +16,7 @@ class ImageModel {
         ];
         this.filteredImages = [...this.images];
         this.currentPage = 1;
-        this.imagesPerPage = 4;
+        this.imagesPerPage = 3;
     }
 
     getImages() {
