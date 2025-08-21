@@ -13,6 +13,8 @@ class ImageModel {
             { id: 10, name: 'Tecnologia 2', category: 'tecnologia', keyword: 'celular, aplicativo, digital', src: 'img/tecnologia2.jpg' },
             { id: 11, name: 'Natureza 3', category: 'natureza', keyword: 'praia, mar, sol', src: 'img/natureza3.jpg' },
             { id: 12, name: 'Cidade 3', category: 'cidade', keyword: 'ponte, rio, arquitetura', src: 'img/cidade3.jpg' },
+            { id: 13, name: 'Tecnologia 3', category: 'tecnologia', keyword: 'aplicativo, app, mobile', src: 'img/tecnologia3.jpg' },
+            { id: 14, name: 'Pessoa 3', category: 'pessoas', keyword: 'multidão, show, cidade', src: 'img/pessoas3.jpg' },
         ];
         this.filteredImages = [...this.images];
         this.currentPage = 1;

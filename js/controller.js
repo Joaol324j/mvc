@@ -5,10 +5,8 @@ class ImageController {
         this.currentCategory = 'all';
         this.currentKeyword = '';
 
-        // Inicializa a galeria
         this.updateGallery();
 
-        // Bind eventos da View ao Controller
         this.view.bindCategoryFilter(this.handleCategoryFilter.bind(this));
         this.view.bindSearchInput(this.handleSearchInput.bind(this));
         this.view.bindPagination(this.handlePagination.bind(this));
@@ -27,13 +25,13 @@ class ImageController {
 
     handleCategoryFilter(category) {
         this.currentCategory = category;
-        this.model.filterImages(this.currentCategory, this.currentKeyword); // Filtrar antes de atualizar
+        this.model.filterImages(this.currentCategory, this.currentKeyword); 
         this.updateGallery();
     }
 
     handleSearchInput(keyword) {
         this.currentKeyword = keyword;
-        this.model.filterImages(this.currentCategory, this.currentKeyword); // Filtrar antes de atualizar
+        this.model.filterImages(this.currentCategory, this.currentKeyword); 
         this.updateGallery();
     }
 
