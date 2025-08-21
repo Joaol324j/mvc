@@ -15,7 +15,6 @@ class ImageController {
     }
 
     updateGallery() {
-        this.model.filterImages(this.currentCategory, this.currentKeyword);
         const imagesToDisplay = this.model.getCurrentPageImages();
         const totalPages = this.model.getTotalPages();
         const currentPage = this.model.currentPage;
@@ -28,11 +27,13 @@ class ImageController {
 
     handleCategoryFilter(category) {
         this.currentCategory = category;
+        this.model.filterImages(this.currentCategory, this.currentKeyword); // Filtrar antes de atualizar
         this.updateGallery();
     }
 
     handleSearchInput(keyword) {
         this.currentKeyword = keyword;
+        this.model.filterImages(this.currentCategory, this.currentKeyword); // Filtrar antes de atualizar
         this.updateGallery();
     }
 

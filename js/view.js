@@ -60,6 +60,6 @@ class ImageView {
         setTimeout(() => {
             callback();
             this.galleryContainer.style.opacity = 1;
-        }, 500); // Duração da transição
+        }, 500); 
     }
 }
