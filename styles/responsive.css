@@ -22,7 +22,7 @@
 
     .gallery {
         gap: 15px;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Ajusta o tamanho dos itens */
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
         overflow-y: hidden;
     }
 

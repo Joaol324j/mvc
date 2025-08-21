@@ -38,7 +38,7 @@ class ImageModel {
             );
         }
         this.filteredImages = tempImages;
-        this.currentPage = 1; // Reset to first page on filter/search
+        this.currentPage = 1; 
     }
 
     getCurrentPageImages() {
