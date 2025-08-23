@@ -1,5 +1,20 @@
 @media (max-width: 768px) {
 
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        position: relative;
+    }
+
+    .theme-toggle {
+        width: 44px;
+        height: 44px;
+        position: relative;
+        right: auto;
+        margin-top: 10px;
+    }
+
      h1 {
         font-size: clamp(1.5rem, 4vw, 2.5rem); 
     }
@@ -21,17 +36,42 @@
     }
 
     .gallery {
-        gap: 15px;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
-        overflow-y: hidden;
+        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+        padding: 0 15px;
     }
 
     .gallery-item {
         width: 100%;
-        overflow-y: hidden;
     }
 
     .gallery-item img {
-        height: 200px;
+        height: 250px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    .gallery-item {
+        max-width: 100%;
+    }
+    
+    .gallery-item img {
+        height: 220px;
+    }
+    
+    .controls {
+        gap: 10px;
+    }
+    
+    .category-buttons button {
+        width: 100%;
+        margin-top: 10px;
     }
 }

@@ -4,35 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria de Imagens MVC</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/responsive.css">
 </head>
 <body>
-    <h1>Galeria de Imagens</h1>
+    <header class="header">
+        <h1>Galeria de Imagens</h1>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+            <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+    </header>
 
     <div class="controls">
         <div class="category-buttons">
-            <button data-category="all">Todas</button>
-            <button data-category="natureza">Natureza</button>
-            <button data-category="cidade">Cidade</button>
-            <button data-category="animais">Animais</button>
-            <button data-category="pessoas">Pessoas</button>
-            <button data-category="tecnologia">Tecnologia</button>
+            <button data-category="all" data-aos="fade-up-right" data-aos-delay="300">Todas</button>
+            <button data-category="natureza" data-aos="fade-up-right" data-aos-delay="400">Natureza</button>
+            <button data-category="cidade" data-aos="fade-up-right" data-aos-delay="500" >Cidade</button>
+            <button data-category="animais" data-aos="fade-up-left" data-aos-delay="600">Animais</button>
+            <button data-category="pessoas" data-aos="fade-up-left" data-aos-delay="700">Pessoas</button>
+            <button data-category="tecnologia" data-aos="fade-up-left" data-aos-delay="800">Tecnologia</button>
         </div>
-        <div class="search-bar">
+        <div class="search-bar" data-aos="fade-up-left" data-aos-delay="1000">
             <input type="text" id="search-input" placeholder="Buscar por palavra-chave...">
         </div>
     </div>
 
-    <div class="gallery" id="gallery-container">
+    <div class="gallery" id="gallery-container" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="4000">
     </div>
 
     <div class="pagination" id="pagination-container">
     </div>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/theme.js"></script>
     <script src="js/model.js"></script>
     <script src="js/view.js"></script>
     <script src="js/controller.js"></script>
     <script src="js/app.js"></script>
+    <script src="/js/animation.js"></script>
 </body>
 </html>
