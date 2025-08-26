@@ -136,14 +136,14 @@ h1 {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.05s ease-in-out; 
     box-shadow: 0 4px 14px var(--shadow-accent);
 }
 
 .category-buttons button:hover {
     background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 6px 20px var(--shadow-accent);
+    transform: translateY(-10px) scale(1.03) !important; 
+    box-shadow: 0 12px 24px var(--shadow-accent); 
 }
 
 .category-buttons button:focus {
@@ -230,8 +230,8 @@ h1 {
 .pagination button:hover {
     background-color: var(--accent-primary);
     color: var(--bg-secondary);
-    transform: scale(1.05);
     border-color: var(--accent-primary);
+
 }
 
 .pagination button.active {
