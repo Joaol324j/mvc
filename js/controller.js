@@ -24,12 +24,14 @@ class ImageController {
     }
 
     handleCategoryFilter(category) {
+        if (category === this.currentCategory) return;
         this.currentCategory = category;
         this.model.filterImages(this.currentCategory, this.currentKeyword); 
         this.updateGallery();
     }
 
     handleSearchInput(keyword) {
+        if (keyword === this.currentKeyword) return;
         this.currentKeyword = keyword;
         this.model.filterImages(this.currentCategory, this.currentKeyword); 
         this.updateGallery();

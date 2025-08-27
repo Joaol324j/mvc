@@ -17,6 +17,11 @@ class ImageView {
             `;
             this.galleryContainer.appendChild(imgElement);
         });
+        if (window.AOS && typeof window.AOS.refreshHard === 'function') {
+            window.AOS.refreshHard();
+        } else if (window.AOS && typeof window.AOS.refresh === 'function') {
+            window.AOS.refresh();
+        }
     }
 
     renderPagination(currentPage, totalPages) {
@@ -35,9 +40,9 @@ class ImageView {
 
     bindCategoryFilter(handler) {
         this.categoryButtons.addEventListener('click', (event) => {
-            if (event.target.tagName === 'BUTTON') {
-                handler(event.target.dataset.category);
-            }
+            const button = event.target.closest('button');
+            if (!button || !this.categoryButtons.contains(button)) return;
+            handler(button.dataset.category);
         });
     }
 
@@ -49,9 +54,11 @@ class ImageView {
 
     bindPagination(handler) {
         this.paginationContainer.addEventListener('click', (event) => {
-            if (event.target.tagName === 'BUTTON' && event.target.classList.contains('page-button')) {
-                handler(parseInt(event.target.dataset.page));
-            }
+            const button = event.target.closest('button');
+            if (!button || !this.paginationContainer.contains(button)) return;
+            if (!button.classList.contains('page-button')) return;
+            const page = parseInt(button.dataset.page, 10);
+            if (!Number.isNaN(page)) handler(page);
         });
     }
 
