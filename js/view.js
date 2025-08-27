@@ -30,6 +30,8 @@ class ImageView {
             const button = document.createElement('button');
             button.textContent = i;
             button.classList.add('page-button');
+            button.setAttribute('data-aos', 'fade-up');
+            button.setAttribute('data-aos-delay', `${100 * i}`);
             if (i === currentPage) {
                 button.classList.add('active');
             }
