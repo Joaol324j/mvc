@@ -1,5 +1,4 @@
 :root {
-    /* Light Theme Colors */
     --bg-primary: #f9fafc;
     --bg-secondary: #ffffff;
     --text-primary: #2c3e50;
@@ -13,7 +12,6 @@
 }
 
 [data-theme="dark"] {
-    /* Dark Theme Colors */
     --bg-primary: #0f0f23;
     --bg-secondary: #1a1a2e;
     --text-primary: #e8e8e8;
