@@ -11,11 +11,9 @@ O objetivo do projeto é demonstrar na prática a separação de responsabilidad
 
 * Estrutura baseada no padrão **MVC**.
 * Controle de **paginação**.
-* **Animações personalizadas** em CSS e JS.
-* Uso da biblioteca **[AOS (Animate On Scroll)](https://michalsnik.github.io/aos/)** para efeitos de rolagem.
+* **Animações personalizadas** com CSS/JS e efeitos de rolagem com **AOS (Animate On Scroll)**.  
 * **Tema dinâmico** configurado via `theme.js`.
 * Responsividade com `responsive.css`.
-* Organização modular de código em **Model, View e Controller**.
 
 ---
 
