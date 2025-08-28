@@ -136,7 +136,7 @@ h1 {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.05s ease-in-out; 
+    transition: all 0.03s ease-in-out; 
     box-shadow: 0 4px 14px var(--shadow-accent);
 }
 
